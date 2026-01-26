@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External JavaScript -->
+    <script src="validate.js"></script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <div class="form-box">
+        <form onsubmit="return validateForm()">
+
+            <label>First Name:</label>
+            <input type="text" id="fname"><br><br>
+
+            <label>Last Name:</label>
+            <input type="text" id="lname"><br><br>
+
+            <label>Password:</label>
+            <input type="password" id="password"><br><br>
+
+            <label>E-mail:</label>
+            <input type="text" id="email"><br><br>
+
+            <label>Mobile Number:</label>
+            <input type="text" id="mobile"><br><br>
+
+            <label>Address:</label>
+            <textarea id="address"></textarea><br><br>
+
+            <input type="submit" value="Register">
+
+        </form>
+    </div>
+
+</body>
+</html>
