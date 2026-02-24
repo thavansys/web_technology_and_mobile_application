@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tamil Nadu Districts – Wikipedia Viewer</title>
+    <style>
+        body {
+            background-color: #fff7e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkblue;
+            margin-top: 20px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .container1 {
+            box-shadow: 5px 5px 20px grey;
+        }
+
+        .container2 {
+            margin-left: 40px;
+            border: 2px solid black;
+            box-shadow: 5px 5px 20px grey;
+        }
+
+        iframe {
+            width: 800px;
+            height: 640px;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Tamil Nadu Districts – Wikipedia Viewer</h1>
+
+<div class="main">
+
+    <div class="container1">
+        <img src="chennai-map.jpg"
+             alt="Tamil Nadu District Map"
+             usemap="#image-map">
+
+        <map name="image-map">
+            <area class="chennai" shape="rect" coords="474,48,462,76" alt="Chennai">
+            <area class="kanchipuram" shape="poly" coords="410,76,415,112,456,75" alt="Kanchipuram">
+            <area class="tiruvallur" shape="poly" coords="467,18,418,46,429,66,479,39,474,27" alt="Tiruvallur">
+            <area class="vellore" shape="poly" coords="322,79,323,102,354,92,361,63,304,63,290,90" alt="Vellore">
+            <area class="salem" shape="poly" coords="187,194,250,202,308,241,270,226,204,245" alt="Salem">
+            <area class="madurai" shape="poly" coords="160,460,221,399,262,408,226,443" alt="Madurai">
+            <area class="tirunelveli" shape="poly" coords="125,566,163,555,191,545,199,613,163,595" alt="Tirunelveli">
+            <area class="coimbatore" shape="poly" coords="97,379,118,329,106,264,81,276" alt="Coimbatore">
+        </map>
+    </div>
+
+    <div class="container2">
+        <iframe class="iframe1" name="wiki-frame">              
+        </iframe>
+    </div>
+
+</div>
+
+<script>
+    const iframe = document.querySelector(".iframe1");
+
+    function load(url) {
+        iframe.src = url;
+    }
+
+    document.querySelector(".chennai").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Chennai_district"));
+    document.querySelector(".kanchipuram").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Kanchipuram_district"));
+    document.querySelector(".tiruvallur").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Tiruvallur_district"));
+    document.querySelector(".vellore").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Vellore_district"));
+    document.querySelector(".salem").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Salem_district"));
+    document.querySelector(".madurai").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Madurai_district"));
+    document.querySelector(".tirunelveli").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Tirunelveli_district"));
+    document.querySelector(".coimbatore").addEventListener("click", () => load("https://en.wikipedia.org/wiki/Coimbatore_district"));
+</script>
+
+</body>
+</html>
